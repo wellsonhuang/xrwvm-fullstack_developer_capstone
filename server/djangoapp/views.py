@@ -60,7 +60,7 @@ def registration(request):
         )
         login(request, user)
         return JsonResponse({
-            "userName": username, 
+            "userName": username,
             "status": "Authenticated"})
 
 
@@ -116,6 +116,6 @@ def add_review(request):
     except Exception as e:
         logger.error(f"Error posting review: {e}")
         return JsonResponse({
-            "status": 401, 
+            "status": 401,
             "message": "Error in posting review"
             })
